@@ -38,7 +38,7 @@ client.on('guildMemberAdd', member => {
   welcomeEmbed.setDescription(member.user.username + ' is now part of our server of ' + member.guild.memberCount + ' people')
   welcomeEmbed.setTimestamp()
   client.channels.cache.get('845830073675677716').send(welcomeEmbed);
-  var role = member.guild.roles.cache.find(role => role.name == 'Member');
+  var role = member.guild.roles.cache.find(role => role.name == 'member');
   member.roles.add(role);
 
 });
