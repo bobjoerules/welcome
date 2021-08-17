@@ -17,6 +17,7 @@ function getRandomColor() {
   console.log(color)
   return color;
 }
+
 keepAlive()
 
 client.once('ready', () => {
