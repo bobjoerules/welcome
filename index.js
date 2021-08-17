@@ -40,16 +40,15 @@ client.on('guildMemberAdd', member => {
   client.channels.cache.get('845830073675677716').send(welcomeEmbed);
   var role = member.guild.roles.cache.find(role => role.name == 'member');
   member.roles.add(role);
-
 });
+
 client.on("guildMemberRemove", member => {
   const goodbyeEmbed = new Discord.MessageEmbed()
   goodbyeEmbed.setTitle('Goodbye')
   goodbyeEmbed.setColor('#ff0000')
   goodbyeEmbed.setDescription(member.user.username + ' is now not a part of our server of ' + member.guild.memberCount + ' people')
   goodbyeEmbed.setTimestamp()
-  client.channels.cache.get('845830073675677716').send(goodbyeEmbed);
-  
+  client.channels.cache.get('845830073675677716').send(goodbyeEmbed); 
 });
 
 client.login(process.env.TOKEN)
